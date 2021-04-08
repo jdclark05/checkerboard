@@ -1,0 +1,9 @@
+from flask import Flask, render_template, request
+app = Flask(__name__)
+
+@app.route("/<int:x>/<int:y>")
+def index(x, y):
+    return render_template("index.html", x=x, y=y)
+
+if __name__=="__main__":
+    app.run(debug=True)

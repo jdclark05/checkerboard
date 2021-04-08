@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">'>
+</head>
+<body>
+    <table>
+        {% for i in range(0, y) %}
+        <tr>
+            {% for x in range(0, x) %}
+            {% if (i+x) % 2 == 0 %}
+                <td><div class="box" style="background-color: #222;"></div></td>
+            {% else %}
+                <td><div class="box" style="background-color: red;"></div></td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table> 
+</body>
+</html>
+
